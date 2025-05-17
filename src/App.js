@@ -27,7 +27,7 @@ const App = () => {
     return (
       <div className="video-tela-inicial">
         <button onClick={handleIniciar} className="video-botao-iniciar">
-          Iniciar Apresentação
+          Iniciar Apresentação Posto São Paulo 3
         </button>
       </div>
     );
