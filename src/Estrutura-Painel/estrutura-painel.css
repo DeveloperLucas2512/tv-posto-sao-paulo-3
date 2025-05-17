@@ -1,0 +1,115 @@
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 2vh 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.imagens-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-banner {
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Colunas com fonte maior */
+.colunas3 {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+}
+
+.coluna {
+  flex: 1;
+  max-width: 33%;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+
+/* Título das colunas */
+.coluna-titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  padding: 14px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+}
+
+/* Subtítulos */
+.subtitulo {
+  font-size: 2rem;
+  color: #ffdd00;
+  font-weight: bold;
+  margin: 24px 0 10px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Itens */
+.item {
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 12px 0;
+  white-space: nowrap;
+}
+
+.name {
+  flex-shrink: 0;
+  max-width: 65%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dots {
+  flex-grow: 1;
+  margin: 0 10px;
+  border-bottom: 1.5px dotted #aaa;
+  height: 10px;
+}
+
+.price {
+  flex-shrink: 0;
+  min-width: 70px;
+  text-align: right;
+}
+
+/* Grid de sabores */
+.sabores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.sabor-item {
+  font-size: 1.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}

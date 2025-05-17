@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import PainelPostoSaoPaulo from "./Estrutura-Painel/estrutura-painel";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./App.css";
+
+const App = () => {
+  const [iniciar, setIniciar] = useState(false);
+
+  const entrarEmTelaCheia = () => {
+    const elem = document.documentElement;
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  };
+
+  const handleIniciar = () => {
+    entrarEmTelaCheia();
+    setIniciar(true);
+  };
+
+  if (!iniciar) {
+    return (
+      <div className="video-tela-inicial">
+        <button onClick={handleIniciar} className="video-botao-iniciar">
+          Iniciar Apresentação
+        </button>
+      </div>
+    );
+  }
+
+  return <PainelPostoSaoPaulo />;
+};
 
 export default App;
