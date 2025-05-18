@@ -1,21 +1,8 @@
 import React from "react";
 import logo from "../Assets/logo-IA-posto-sao-paulo-3.png";
-import "./estrutura-painel.css";
+import "./estrutura-painel-cafe";
 
 const colunas = {
-  "Cafés & Leite": [
-    { nome: "Café Curto", preco: "4,50" },
-    { nome: "Café Normal", preco: "4,75" },
-    { nome: "Capuccino", preco: "6,00" },
-    { nome: "Mocaccino", preco: "6,00" },
-    { nome: "Italiana(Pingado)", preco: "6,00" },
-    { nome: "Chocolate Quente", preco: "6,00" },
-    { nome: "Leite com Achocolatado", preco: "7,50" },
-    { espaco: true },
-    { nome: "Adicional Chantilly", preco: "5,30" },
-    { nome: "Adicional Creme de Avelã", preco: "6,00" },
-  ],
-
   Sucos: [
     { nome: "Laranja | Garrafa 1Litro", preco: "20,00" },
     { nome: "Laranja | Jarra 500ml", preco: "18,00" },
@@ -52,7 +39,7 @@ const colunas = {
   ],
 };
 
-const PainelPostoSaoPaulo = () => {
+const PainelPostoSaoPauloVitaminas = () => {
   return (
     <div className="container">
       <div className="imagens-banner">
@@ -101,4 +88,4 @@ const PainelPostoSaoPaulo = () => {
   );
 };
 
-export default PainelPostoSaoPaulo;
+export default PainelPostoSaoPauloVitaminas;
