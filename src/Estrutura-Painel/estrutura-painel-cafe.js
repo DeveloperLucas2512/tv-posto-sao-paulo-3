@@ -3,14 +3,14 @@ import logo from "../Assets/logo-IA-posto-sao-paulo-3.png";
 import "./estrutura-painel-cafe.css";
 
 // Imagens dos cafés
-import cafeNormal from "../Assets/cafe-normal.png";
+import cafeNormal from "../Assets/cafe-normal-semLogo.png";
 import cafeCurto from "../Assets/cafe-curto-semLogo.png";
-import capuccino from "../Assets/cappuccino-posto-sao-paulo-3.png";
-import mocaccino from "../Assets/mocaccino-posto-sao-paulo.png";
-import italiana from "../Assets/pingado-posto-sao-paulo.png";
-import chocolate from "../Assets/chocolate-quente-posto-sao-paulo.png";
-import chantilly from "../Assets/cafe-normal.png";
-import cremeAvela from "../Assets/cafe-normal.png";
+import capuccino from "../Assets/cappuccino-semLogo.png";
+import mocaccino from "../Assets/mocaccino-semLogo.png";
+import italiana from "../Assets/pingaSemLogo.png";
+import chocolate from "../Assets/chocolate-quente-semLogo.png";
+import chantilly from "../Assets/adicional-creme-chantilly.png";
+import cremeAvela from "../Assets/adicional-creme-avela.png";
 
 const cafes = [
   { nome: "Café Normal (Expresso)", preco: "4,75", imagem: cafeNormal },
