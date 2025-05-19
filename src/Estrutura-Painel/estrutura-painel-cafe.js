@@ -4,7 +4,7 @@ import "./estrutura-painel-cafe.css";
 
 // Imagens dos cafés
 import cafeNormal from "../Assets/cafe-normal.png";
-import cafeCurto from "../Assets/cafe-normal.png";
+import cafeCurto from "../Assets/cafe-curto-semLogo.png";
 import capuccino from "../Assets/cappuccino-posto-sao-paulo-3.png";
 import mocaccino from "../Assets/mocaccino-posto-sao-paulo.png";
 import italiana from "../Assets/pingado-posto-sao-paulo.png";
