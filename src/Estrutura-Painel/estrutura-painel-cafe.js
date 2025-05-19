@@ -5,7 +5,7 @@ import "./estrutura-painel-cafe.css";
 // Imagens dos cafés
 import cafeNormal from "../Assets/cafe-normal.png";
 import cafeCurto from "../Assets/cafe-normal.png";
-import capuccino from "../Assets/cafe-normal.png";
+import capuccino from "../Assets/cappuccino-posto-sao-paulo.png";
 import mocaccino from "../Assets/cafe-normal.png";
 import italiana from "../Assets/cafe-normal.png";
 import chocolate from "../Assets/cafe-normal.png";
@@ -44,6 +44,8 @@ const PainelCafeCards = () => {
         ))}
       </div>
 
+      <div className="linha-decorativa" />
+
       <h3 className="subtitulo">Adicionais</h3>
       <div className="linha-horizontal">
         {adicionais.map((item, index) => (
@@ -53,6 +55,7 @@ const PainelCafeCards = () => {
               alt={item.nome}
               className="cafe-icon-round"
             />
+            <tr />
             <span className="name">Adicional {item.nome}</span>
             <span className="dots"></span>
             <span className="price">{item.preco}</span>
