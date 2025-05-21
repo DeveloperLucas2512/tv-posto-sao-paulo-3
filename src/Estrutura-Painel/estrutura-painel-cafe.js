@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../Assets/logo-IA-posto-sao-paulo-3.png";
-import "./estrutura-painel-cafe.css";
 
 // Imagens dos cafés
 import cafeNormal from "../Assets/cafe-normal-semLogo.png";
@@ -11,6 +10,8 @@ import italiana from "../Assets/pingaSemLogo.png";
 import chocolate from "../Assets/chocolate-quente-semLogo.png";
 import chantilly from "../Assets/adicional-creme-chantilly.png";
 import cremeAvela from "../Assets/adicional-creme-avela.png";
+
+import "./estrutura-painel-cafe.css";
 
 const cafes = [
   { nome: "Café Normal (Expresso)", preco: "4,75", imagem: cafeNormal },
@@ -26,20 +27,26 @@ const adicionais = [
   { nome: "Creme de Avelã", preco: "6,00", imagem: cremeAvela },
 ];
 
-const PainelCafeCards = () => {
+const PainelCafe = () => {
   return (
     <div className="container">
       <div className="imagens-banner">
         <img src={logo} alt="Logo" className="logo-banner" />
       </div>
+
       <h2 className="coluna-titulo">Cafés & Leite</h2>
 
-      <div className="cards-grid">
+      <div className="lista-itens">
         {cafes.map((item, index) => (
-          <div key={index} className="card">
-            <img src={item.imagem} alt={item.nome} className="card-img-large" />
-            <span className="card-title">{item.nome}</span>
-            <span className="card-price">R$ {item.preco}</span>
+          <div key={index} className="item">
+            <img
+              src={item.imagem}
+              alt={item.nome}
+              className="cafe-icon-round"
+            />
+            <span className="name">{item.nome}</span>
+            <span className="dots"></span>
+            <span className="price">R$ {item.preco}</span>
           </div>
         ))}
       </div>
@@ -47,18 +54,18 @@ const PainelCafeCards = () => {
       <div className="linha-decorativa" />
 
       <h3 className="subtitulo">Adicionais</h3>
-      <div className="linha-horizontal">
+
+      <div className="adicionais-linha">
         {adicionais.map((item, index) => (
-          <div key={index} className="item item-inline">
+          <div key={index} className="adicional-item">
             <img
               src={item.imagem}
               alt={item.nome}
               className="cafe-icon-round"
             />
-            <tr />
             <span className="name">Adicional {item.nome}</span>
             <span className="dots"></span>
-            <span className="price">{item.preco}</span>
+            <span className="price">R$ {item.preco}</span>
           </div>
         ))}
       </div>
@@ -66,4 +73,4 @@ const PainelCafeCards = () => {
   );
 };
 
-export default PainelCafeCards;
+export default PainelCafe;
