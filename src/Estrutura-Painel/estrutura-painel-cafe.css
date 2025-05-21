@@ -13,7 +13,7 @@ body {
   overflow: hidden;
 }
 
-.container {
+.container-cafe {
   width: 100%;
   height: 100vh;
   padding: 0vh 3vw;
@@ -23,18 +23,19 @@ body {
   justify-content: flex-start;
 }
 
-.imagens-banner {
+.imagens-banner-cafe {
+  margin: 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.logo-banner {
-  max-width: 180px;
+.logo-banner-cafe {
+  max-width: 150px;
   width: 100%;
 }
 
-.subtitulo {
+.subtitulo-cafe {
   color: #ffd700;
   font-size: 1.4rem;
   font-weight: bold;
@@ -42,43 +43,43 @@ body {
   margin-top: 5px;
 }
 
-.lista-itens {
+.lista-itens-cafe {
   display: flex;
   flex-direction: column;
   gap: 3px;
   margin-bottom: 10px;
 }
 
-.item {
+.item-cafe {
   display: flex;
   align-items: center;
   width: 1170px;
   font-size: 2.2rem;
   font-weight: 600;
-  line-height: 25px;
+  line-height: 30px;
 }
 
-.cafe-icon-round {
-  width: 80px;
-  height: 80px;
+.cafe-icon-round-cafe {
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
 }
 
-.name {
+.name-cafe {
   flex-shrink: 0;
   /* Remove limite que causava corte */
 }
 
-.dots {
+.dots-cafe {
   flex-grow: 1;
   margin: 0 10px;
   border-bottom: 2px dotted #aaa;
   height: 10px;
 }
 
-.price {
+.price-cafe {
   padding: 10px;
   background-color: #fff;
   color: #000;
@@ -90,7 +91,7 @@ body {
 }
 
 /* Linha decorativa */
-.linha-decorativa {
+.linha-decorativa-cafe {
   width: 100%;
   height: 1px;
   margin: 0px 0;
@@ -108,10 +109,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: -92px;
+  margin-top: -70px;
 }
 
-.coluna-titulo {
+.coluna-titulo-cafe {
   font-size: 1.6rem;
   font-weight: bold;
   background-color: #fff;
@@ -123,7 +124,7 @@ body {
 }
 
 /* Adicionais ficam em linha */
-.adicionais-linha {
+.adicionais-linha-cafe {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,14 +133,14 @@ body {
   margin-top: -00px;
 }
 
-.adicional-item {
+.adicional-item-cafe {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.price-adicional {
+.price-adicional-cafe {
   padding: 10px;
   background-color: #fff;
   color: #000;
@@ -150,7 +151,7 @@ body {
   border-radius: 5px;
 }
 
-.img-cafes-adicional {
+.img-cafes-adicional-cafe {
   width: 50px;
   height: 50px;
   border-radius: 50%;

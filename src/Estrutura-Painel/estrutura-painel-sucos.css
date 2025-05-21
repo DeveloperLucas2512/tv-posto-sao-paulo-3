@@ -1,7 +1,12 @@
-body {
-  background-color: #000;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
   font-family: "Segoe UI", system-ui, sans-serif;
   color: white;
   overflow: hidden;
@@ -21,20 +26,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
 }
 
 .logo-banner {
-  max-width: 220px;
+  max-width: 200px;
   height: auto;
   object-fit: contain;
 }
 
-/* Colunas com fonte maior */
-.colunas3 {
+/* Área principal */
+.conteudo {
   display: flex;
   justify-content: center;
-  gap: 4vw;
+  gap: 6vw;
   width: 100%;
   flex-wrap: nowrap;
   margin-top: auto;
@@ -42,43 +47,38 @@ body {
 
 .coluna {
   flex: 1;
-  max-width: 33%;
-  padding: 0 2vw;
-  box-sizing: border-box;
+  max-width: 46%;
+  padding: 0 1vw;
 }
 
-/* Título das colunas */
+/* Títulos */
 .coluna-titulo {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  background-color: #fff;
-  color: #000;
-  padding: 0px 20px;
-  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 8px 30px;
+  border-radius: 15px;
   text-align: center;
-  margin-bottom: 25px;
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+  margin: 50px 0 25px 0;
 }
 
 /* Subtítulos */
 .subtitulo {
-  color: #fd0;
-  font-size: 1.85rem;
+  color: #ffd700;
+  font-size: 2.1rem;
   font-weight: 700;
-  margin: 5px 0 10px;
-  text-shadow: 1px 1px 2px #000;
-  white-space: nowrap;
+  margin: 18px 0 10px;
 }
 
 /* Itens */
 .item {
   display: flex;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   font-weight: 600;
-  margin: 12px 0;
+  margin: 14px 0;
   white-space: nowrap;
-  line-height: 22px;
 }
 
 .name {
@@ -91,27 +91,31 @@ body {
 .dots {
   flex-grow: 1;
   margin: 0 10px;
-  border-bottom: 1.5px dotted #aaa;
-  height: 10px;
+  border-bottom: 2px dotted #aaa;
+  height: 12px;
 }
 
 .price {
   flex-shrink: 0;
-  min-width: 70px;
-  text-align: right;
+  min-width: 85px;
+  text-align: center;
+  padding: 8px 12px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 /* Grid de sabores */
 .sabores-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px 20px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  gap: 12px 30px;
+  margin: 15px 0 25px;
 }
 
 .sabor-item {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 500;
   white-space: nowrap;
 }
