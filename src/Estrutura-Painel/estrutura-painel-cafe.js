@@ -34,24 +34,25 @@ const PainelCafe = () => {
         <img src={logo} alt="Logo" className="logo-banner" />
       </div>
 
-      <h2 className="coluna-titulo">Cafés & Leite</h2>
+      <div className="coluna-cafe">
+        <h2 className="coluna-titulo">Cafés & Leite</h2>
 
-      <div className="lista-itens">
-        {cafes.map((item, index) => (
-          <div key={index} className="item">
-            <img
-              src={item.imagem}
-              alt={item.nome}
-              className="cafe-icon-round"
-            />
-            <span className="name">{item.nome}</span>
-            <span className="dots"></span>
-            <span className="price">R$ {item.preco}</span>
-          </div>
-        ))}
+        <div className="lista-itens">
+          {cafes.map((item, index) => (
+            <div key={index} className="item">
+              <img
+                src={item.imagem}
+                alt={item.nome}
+                className="cafe-icon-round"
+              />
+              <span className="name">{item.nome}</span>
+              <span className="dots"></span>
+              <span className="price">R$ {item.preco}</span>
+            </div>
+          ))}
+        </div>
+        <div className="linha-decorativa" />
       </div>
-
-      <div className="linha-decorativa" />
 
       <h3 className="subtitulo">Adicionais</h3>
 
@@ -61,11 +62,11 @@ const PainelCafe = () => {
             <img
               src={item.imagem}
               alt={item.nome}
-              className="cafe-icon-round"
+              className="img-cafes-adicional"
             />
-            <span className="name">Adicional {item.nome}</span>
+            <span className="name"> {item.nome}</span>
             <span className="dots"></span>
-            <span className="price">R$ {item.preco}</span>
+            <span className="price-adicional">R$ {item.preco}</span>
           </div>
         ))}
       </div>
