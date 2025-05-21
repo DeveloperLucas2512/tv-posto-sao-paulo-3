@@ -22,7 +22,7 @@ const cafes = [
   { nome: "Mocaccino", preco: "6,00", imagem: mocaccino },
   { nome: "Italiana (Pingado)", preco: "6,00", imagem: italiana },
   { nome: "Chocolate Quente", preco: "6,00", imagem: chocolate },
-  { nome: "Leita c/ Achocolatado", preco: "7,50", imagem: achocolatado },
+  { nome: "Leite c/ Achocolatado", preco: "7,50", imagem: achocolatado },
 ];
 
 const adicionais = [
