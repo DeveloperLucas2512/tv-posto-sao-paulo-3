@@ -26,7 +26,7 @@ const App = () => {
   useEffect(() => {
     if (!iniciar) return;
 
-    const tempo = 50000; // 5 segundos para qualquer painel
+    const tempo = painelAtual === "cafe" ? 5000 : 10000;
 
     const timeout = setTimeout(() => {
       setPainelAtual((prev) => (prev === "cafe" ? "sucos" : "cafe"));
@@ -47,11 +47,12 @@ const App = () => {
 
   return (
     <>
-      {painelAtual === "cafe" ? (
+      <div style={{ display: painelAtual === "cafe" ? "block" : "none" }}>
+        <PainelPostoSaoPauloCafe />
+      </div>
+      <div style={{ display: painelAtual === "sucos" ? "block" : "none" }}>
         <PainelVitaminasSucos />
-      ) : (
-        <PainelVitaminasSucos />
-      )}
+      </div>
     </>
   );
 };
