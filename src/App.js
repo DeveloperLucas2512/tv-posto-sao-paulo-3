@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import PainelPostoSaoPauloCafe from "./Estrutura-Painel/estrutura-painel-cafe";
-
+import React, { useState, useEffect } from "react";
+import PainelPostoSaoPauloCafe from "./Estrutura-Painel/painel-cafe";
+import PainelVitaminasSucos from "./Estrutura-Painel/painel-sucos";
 import "./App.css";
 
 const App = () => {
   const [iniciar, setIniciar] = useState(false);
+  const [painelAtual, setPainelAtual] = useState("cafe");
 
   const entrarEmTelaCheia = () => {
     const elem = document.documentElement;
@@ -22,6 +23,18 @@ const App = () => {
     setIniciar(true);
   };
 
+  useEffect(() => {
+    if (!iniciar) return;
+
+    const tempo = 50000; // 5 segundos para qualquer painel
+
+    const timeout = setTimeout(() => {
+      setPainelAtual((prev) => (prev === "cafe" ? "sucos" : "cafe"));
+    }, tempo);
+
+    return () => clearTimeout(timeout);
+  }, [iniciar, painelAtual]);
+
   if (!iniciar) {
     return (
       <div className="video-tela-inicial">
@@ -32,7 +45,15 @@ const App = () => {
     );
   }
 
-  return <PainelPostoSaoPauloCafe />;
+  return (
+    <>
+      {painelAtual === "cafe" ? (
+        <PainelVitaminasSucos />
+      ) : (
+        <PainelVitaminasSucos />
+      )}
+    </>
+  );
 };
 
 export default App;

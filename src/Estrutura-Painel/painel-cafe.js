@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../Assets/logo-IA-posto-sao-paulo-3.png";
-import "./estrutura-painel-cafe.css";
+import "./painel-cafe.css";
 
 // Imagens dos cafés
 import cafeNormal from "../Assets/cafe-normal-semLogo.png";
@@ -12,8 +12,6 @@ import chocolate from "../Assets/chocolate-quente-semLogo.png";
 import chantilly from "../Assets/adicional-creme-chantilly.png";
 import cremeAvela from "../Assets/adicional-creme-avela.png";
 import achocolatado from "../Assets/leite-achocolatado.png";
-
-import "./estrutura-painel-cafe.css";
 
 const cafes = [
   { nome: "Café Normal (Expresso)", preco: "4,75", imagem: cafeNormal },

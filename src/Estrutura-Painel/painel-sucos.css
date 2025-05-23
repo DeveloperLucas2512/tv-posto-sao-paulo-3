@@ -1,0 +1,107 @@
+body {
+  background-color: #000;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.container-sucos {
+  width: 100%;
+  height: 100vh;
+  padding: 2vh 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-sucos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-sucos {
+  max-width: 180px;
+}
+
+.card-sucos {
+  background-color: transparent;
+  margin: -100px auto;
+  border-radius: 15px;
+  padding: 20px;
+  width: 98%;
+}
+
+.titulo-sucos {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 5px 25px;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.lista-sucos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-sucos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  border-bottom: 2px dotted #aaa;
+  padding-bottom: 5px;
+}
+
+.price-sucos {
+  background-color: white;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.subtitulo-sucos {
+  color: #ffd700;
+  font-size: 2rem;
+  margin: 20px 0 10px;
+}
+
+.sabores-carousel-sucos {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.sabor-card-sucos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sabor-card-sucos img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.sabor-card-sucos span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
