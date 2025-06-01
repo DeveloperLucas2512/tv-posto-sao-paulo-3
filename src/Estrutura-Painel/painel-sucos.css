@@ -45,7 +45,7 @@ body {
 .lista-sucos {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0px;
 }
 
 .item-sucos {
@@ -68,12 +68,12 @@ body {
 .subtitulo-sucos {
   color: #ffd700;
   font-size: 2rem;
-  margin: 20px 0 10px;
+  margin: 0px 0 10px;
 }
 
 .sabores-carousel-sucos {
   width: 100%;
-  margin-top: 10px;
+  margin-top: -40px;
   padding: 10px 0;
 }
 
@@ -84,10 +84,10 @@ body {
 }
 
 .sabor-card-sucos img {
-  width: 220px;
-  height: auto;
+  width: 200px;
+  height: 250px;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin: -10px auto;
 }
 
 .sabor-card-sucos span {
@@ -104,4 +104,13 @@ body {
 .swiper-slide {
   display: flex;
   justify-content: center;
+}
+
+.subtitulo-sucos strong {
+  display: flex;
+  gap: 0px;
+}
+
+.sabores {
+  margin-left: auto;
 }

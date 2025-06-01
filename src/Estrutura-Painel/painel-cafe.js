@@ -47,8 +47,9 @@ const PainelCafe = () => {
                 className="cafe-icon-round-cafe"
               />
               <span className="name-cafe">{item.nome}</span>
-              <span className="dots-cafe"></span>
               <span className="price-cafe">R$ {item.preco}</span>
+              <br />
+              <span className="dots-cafe"></span>
             </div>
           ))}
         </div>

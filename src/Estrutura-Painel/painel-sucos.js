@@ -35,6 +35,10 @@ const sabores = [
     nome: "",
     imagem: "https://tvpostosaopaulo3.com.br/imagens/abacaxi-hortela.png",
   },
+  {
+    nome: "",
+    imagem: "https://tvpostosaopaulo3.com.br/imagens/manga.png",
+  },
   { nome: "", imagem: "https://tvpostosaopaulo3.com.br/imagens/caju.png" },
 ];
 
@@ -64,10 +68,14 @@ const PainelSucos = () => {
         </div>
 
         <div className="subtitulo-sucos">
-          <strong>Polpas de Frutas | Copo R$ 9,00 | Jarra R$ 15,00</strong>
-          <br />
-          Sabores:
+          <strong>
+            Polpas de Frutas | Copo R$ 9,00 | Jarra R$ 15,00
+            <span className="sabores">Sabores:</span>
+          </strong>
         </div>
+
+        <br />
+        <br />
 
         <Swiper
           slidesPerView={5}

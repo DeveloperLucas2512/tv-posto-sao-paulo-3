@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PainelPostoSaoPauloCafe from "./Estrutura-Painel/painel-cafe";
-import PainelVitaminasSucos from "./Estrutura-Painel/painel-sucos";
+import PainelSucos from "./Estrutura-Painel/painel-sucos";
+import MiniHamburguer from "./Mini-Hamburger/miniHamburguer";
 import "./App.css";
 
 const App = () => {
@@ -26,11 +27,17 @@ const App = () => {
   useEffect(() => {
     if (!iniciar) return;
 
-    const tempo = painelAtual === "cafe" ? 5000 : 10000;
+    let tempoPainel = 5000; // default
+
+    if (painelAtual === "cafe") tempoPainel = 10000;
+    else if (painelAtual === "sucos") tempoPainel = 20000;
+    else if (painelAtual === "hamburguer") tempoPainel = 15000;
 
     const timeout = setTimeout(() => {
-      setPainelAtual((prev) => (prev === "cafe" ? "sucos" : "cafe"));
-    }, tempo);
+      setPainelAtual((prev) =>
+        prev === "cafe" ? "sucos" : prev === "sucos" ? "hamburguer" : "cafe"
+      );
+    }, tempoPainel);
 
     return () => clearTimeout(timeout);
   }, [iniciar, painelAtual]);
@@ -47,12 +54,9 @@ const App = () => {
 
   return (
     <>
-      <div style={{ display: painelAtual === "cafe" ? "block" : "none" }}>
-        <PainelPostoSaoPauloCafe />
-      </div>
-      <div style={{ display: painelAtual === "sucos" ? "block" : "none" }}>
-        <PainelVitaminasSucos />
-      </div>
+      {painelAtual === "cafe" && <PainelPostoSaoPauloCafe />}
+      {painelAtual === "sucos" && <PainelSucos />}
+      {painelAtual === "hamburguer" && <MiniHamburguer />}
     </>
   );
 };
