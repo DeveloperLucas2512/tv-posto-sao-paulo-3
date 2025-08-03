@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PainelPostoSaoPauloCafe from "./Estrutura-Painel/painel-cafe";
 import PainelSucos from "./Estrutura-Painel/painel-sucos";
 import MiniHamburguer from "./Mini-Hamburger/miniHamburguer";
+import Omelete from "./Omelete/omelete";
 import "./App.css";
 
 const App = () => {
@@ -32,11 +33,16 @@ const App = () => {
     if (painelAtual === "cafe") tempoPainel = 10000;
     else if (painelAtual === "sucos") tempoPainel = 20000;
     else if (painelAtual === "hamburguer") tempoPainel = 15000;
+    else if (painelAtual === "omelete") tempoPainel = 13000;
 
     const timeout = setTimeout(() => {
-      setPainelAtual((prev) =>
-        prev === "cafe" ? "sucos" : prev === "sucos" ? "hamburguer" : "cafe"
-      );
+      setPainelAtual((prev) => {
+        if (prev === "cafe") return "sucos";
+        if (prev === "sucos") return "hamburguer";
+        if (prev === "hamburguer") return "omelete";
+        if (prev === "omelete") return "cafe";
+        return "cafe";
+      });
     }, tempoPainel);
 
     return () => clearTimeout(timeout);
@@ -57,6 +63,7 @@ const App = () => {
       {painelAtual === "cafe" && <PainelPostoSaoPauloCafe />}
       {painelAtual === "sucos" && <PainelSucos />}
       {painelAtual === "hamburguer" && <MiniHamburguer />}
+      {painelAtual === "omelete" && <Omelete />}
     </>
   );
 };
