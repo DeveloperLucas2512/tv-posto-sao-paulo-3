@@ -1,0 +1,34 @@
+.omelete-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.omelete-imagem {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.omelete-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.omelete-video {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.omelete-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

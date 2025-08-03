@@ -74,7 +74,7 @@ body {
 }
 
 .coluna-titulo-cafe {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   background-color: #fff;
   color: #000;
@@ -98,7 +98,7 @@ body {
   gap: 14px;
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -124,11 +124,12 @@ body {
 .item-cafe {
   display: flex;
   align-items: center;
-  width: 1170px;
-  font-size: 2rem;
+  width: 1650px;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 30px;
   position: relative;
+  padding: 10px;
 }
 
 .dots-cafe {
