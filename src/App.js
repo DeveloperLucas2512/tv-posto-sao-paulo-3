@@ -3,6 +3,7 @@ import PainelPostoSaoPauloCafe from "./Estrutura-Painel/painel-cafe";
 import PainelSucos from "./Estrutura-Painel/painel-sucos";
 import MiniHamburguer from "./Mini-Hamburger/miniHamburguer";
 import Omelete from "./Omelete/omelete";
+import Lanches from "./Lanches/lanches";
 import "./App.css";
 
 const App = () => {
@@ -34,13 +35,15 @@ const App = () => {
     else if (painelAtual === "sucos") tempoPainel = 20000;
     else if (painelAtual === "hamburguer") tempoPainel = 15000;
     else if (painelAtual === "omelete") tempoPainel = 13000;
+    else if (painelAtual === "lanches") tempoPainel = 15000;
 
     const timeout = setTimeout(() => {
       setPainelAtual((prev) => {
         if (prev === "cafe") return "sucos";
         if (prev === "sucos") return "hamburguer";
         if (prev === "hamburguer") return "omelete";
-        if (prev === "omelete") return "cafe";
+        if (prev === "omelete") return "lanches";
+        if (prev === "lanches") return "cafe";
         return "cafe";
       });
     }, tempoPainel);
@@ -64,6 +67,7 @@ const App = () => {
       {painelAtual === "sucos" && <PainelSucos />}
       {painelAtual === "hamburguer" && <MiniHamburguer />}
       {painelAtual === "omelete" && <Omelete />}
+      {painelAtual === "lanches" && <Lanches />}
     </>
   );
 };
