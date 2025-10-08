@@ -1,24 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import PainelPostoSaoPauloCafe from "./Estrutura-Painel/painel-cafe";
 import PainelSucos from "./Estrutura-Painel/painel-sucos";
 import MiniHamburguer from "./Mini-Hamburger/miniHamburguer";
 import Omelete from "./Omelete/omelete";
 import Lanches from "./Lanches/lanches";
+import VideosAtualizados from "./VideosAtualizados/videosAtualizados";
 import "./App.css";
 
 const App = () => {
   const [iniciar, setIniciar] = useState(false);
-  const [painelAtual, setPainelAtual] = useState("cafe");
+
+  // Sequência desejada, com o vídeo aparecendo 2x
+  const sequencia = useMemo(
+    () => [
+      "cafe",
+      "video1",
+      "sucos",
+      "hamburguer",
+      "video2",
+      "omelete",
+      "lanches",
+    ],
+    []
+  );
+
+  const [idx, setIdx] = useState(0); // índice da sequência
+
+  const painelAtual = sequencia[idx];
 
   const entrarEmTelaCheia = () => {
     const elem = document.documentElement;
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-      elem.msRequestFullscreen();
-    }
+    if (elem.requestFullscreen) elem.requestFullscreen();
+    else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+    else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
   };
 
   const handleIniciar = () => {
@@ -29,27 +43,25 @@ const App = () => {
   useEffect(() => {
     if (!iniciar) return;
 
-    let tempoPainel = 5000; // default
+    // tempos por painel (ms)
+    const tempos = {
+      cafe: 10000,
+      video1: 25000, // 25s
+      sucos: 20000,
+      hamburguer: 15000,
+      video2: 25000, // 25s
+      omelete: 13000,
+      lanches: 15000,
+    };
 
-    if (painelAtual === "cafe") tempoPainel = 10000;
-    else if (painelAtual === "sucos") tempoPainel = 20000;
-    else if (painelAtual === "hamburguer") tempoPainel = 15000;
-    else if (painelAtual === "omelete") tempoPainel = 13000;
-    else if (painelAtual === "lanches") tempoPainel = 15000;
+    const tempoPainel = tempos[painelAtual] ?? 5000;
 
     const timeout = setTimeout(() => {
-      setPainelAtual((prev) => {
-        if (prev === "cafe") return "sucos";
-        if (prev === "sucos") return "hamburguer";
-        if (prev === "hamburguer") return "omelete";
-        if (prev === "omelete") return "lanches";
-        if (prev === "lanches") return "cafe";
-        return "cafe";
-      });
+      setIdx((i) => (i + 1) % sequencia.length);
     }, tempoPainel);
 
     return () => clearTimeout(timeout);
-  }, [iniciar, painelAtual]);
+  }, [iniciar, painelAtual, sequencia.length]);
 
   if (!iniciar) {
     return (
@@ -64,6 +76,11 @@ const App = () => {
   return (
     <>
       {painelAtual === "cafe" && <PainelPostoSaoPauloCafe />}
+
+      {(painelAtual === "video1" || painelAtual === "video2") && (
+        <VideosAtualizados />
+      )}
+
       {painelAtual === "sucos" && <PainelSucos />}
       {painelAtual === "hamburguer" && <MiniHamburguer />}
       {painelAtual === "omelete" && <Omelete />}

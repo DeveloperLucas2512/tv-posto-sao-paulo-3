@@ -1,0 +1,28 @@
+/* garante que o container ocupe a tela toda */
+.video-atualizados__wrapper {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left: 0 */
+  width: 100vw;
+  height: 100vh;
+  background: #000; /* bordas pretas se houver letterboxing */
+  overflow: hidden;
+  z-index: 9999; /* fica acima dos demais painéis */
+}
+
+/* vídeo em tela cheia (100%), cobrindo tudo */
+.video-atualizados__fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill; /* preenche sem distorcer */
+  display: block;
+  pointer-events: none; /* evita clique acidental, remova se quiser controles */
+}
+
+/* opcionalmente, para prevenir scroll no body enquanto o vídeo está ativo */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overscroll-behavior: none;
+}
